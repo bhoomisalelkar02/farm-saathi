@@ -41,15 +41,15 @@ const Signup = () => {
           <div className="mx-auto w-16 h-16 bg-gradient-harvest rounded-full flex items-center justify-center mb-4">
             <UserPlus className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold text-foreground mb-2">Join कृषक मित्र</h1>
-          <p className="text-muted-foreground">Register to access agricultural services</p>
+          <h1 className="text-3xl font-bold text-foreground mb-2">कृषक मित्र में शामिल हों | Join कृषक मित्र</h1>
+          <p className="text-muted-foreground">कृषि सेवाओं का लाभ उठाने के लिए रजिस्टर करें | Register to access agricultural services</p>
         </div>
 
         <Card className="shadow-crop">
           <CardHeader>
-            <CardTitle className="text-2xl text-center">Farmer Registration</CardTitle>
+            <CardTitle className="text-2xl text-center">किसान पंजीकरण | Farmer Registration</CardTitle>
             <CardDescription className="text-center">
-              Create your account to get personalized farming assistance
+              व्यक्तिगत कृषि सहायता प्राप्त करने के लिए अपना खाता बनाएं | Create your account to get personalized farming assistance
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
@@ -57,26 +57,26 @@ const Signup = () => {
             <div className="space-y-4">
               <h3 className="font-semibold text-primary flex items-center gap-2">
                 <User className="w-4 h-4" />
-                Personal Information
+                व्यक्तिगत जानकारी | Personal Information
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Full Name *</Label>
+                  <Label htmlFor="name">पूरा नाम | Full Name *</Label>
                   <Input
                     id="name"
-                    placeholder="Enter your full name"
+                    placeholder="अपना पूरा नाम दर्ज करें | Enter full name"
                     value={formData.name}
                     onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="phone">Mobile Number *</Label>
+                  <Label htmlFor="phone">मोबाइल नंबर | Mobile Number *</Label>
                   <div className="relative">
                     <Phone className="absolute left-3 top-3 w-4 h-4 text-muted-foreground" />
                     <Input
                       id="phone"
                       type="tel"
-                      placeholder="Enter mobile number"
+                      placeholder="मोबाइल नंबर दर्ज करें | Enter mobile number"
                       className="pl-10"
                       value={formData.phone}
                       onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
@@ -85,7 +85,7 @@ const Signup = () => {
                 </div>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="email">Email (Optional)</Label>
+                <Label htmlFor="email">ईमेल (वैकल्पिक) | Email (Optional)</Label>
                 <Input
                   id="email"
                   type="email"
@@ -100,32 +100,32 @@ const Signup = () => {
             <div className="space-y-4">
               <h3 className="font-semibold text-primary flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
-                Location Details
+                स्थान विवरण | Location Details
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="village">Village *</Label>
+                  <Label htmlFor="village">गाँव | Village *</Label>
                   <Input
                     id="village"
-                    placeholder="Village name"
+                    placeholder="गाँव का नाम | Village name"
                     value={formData.village}
                     onChange={(e) => setFormData(prev => ({ ...prev, village: e.target.value }))}
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="district">District *</Label>
+                  <Label htmlFor="district">जिला | District *</Label>
                   <Input
                     id="district"
-                    placeholder="District name"
+                    placeholder="जिले का नाम | District name"
                     value={formData.district}
                     onChange={(e) => setFormData(prev => ({ ...prev, district: e.target.value }))}
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="state">State *</Label>
+                  <Label htmlFor="state">राज्य | State *</Label>
                   <Select value={formData.state} onValueChange={(value) => setFormData(prev => ({ ...prev, state: value }))}>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select state" />
+                      <SelectValue placeholder="राज्य चुनें | Select state" />
                     </SelectTrigger>
                     <SelectContent>
                       {indianStates.map(state => (

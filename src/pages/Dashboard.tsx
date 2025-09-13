@@ -63,8 +63,8 @@ const Dashboard = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl font-bold text-foreground">कृषक मित्र Dashboard</h1>
-              <p className="text-muted-foreground">Welcome back, Farmer!</p>
+              <h1 className="text-2xl font-bold text-foreground">कृषक मित्र डैशबोर्ड | कृषक मित्र Dashboard</h1>
+              <p className="text-muted-foreground">वापस स्वागत है, किसान! | Welcome back, Farmer!</p>
             </div>
             <div className="flex items-center gap-4">
               <Badge variant="secondary" className="bg-primary/10 text-primary">
@@ -81,15 +81,15 @@ const Dashboard = () => {
           <TabsList className="grid w-full grid-cols-3 mb-8">
             <TabsTrigger value="disease" className="flex items-center gap-2">
               <Camera className="w-4 h-4" />
-              Disease Detection
+              रोग पहचान | Disease Detection
             </TabsTrigger>
             <TabsTrigger value="weather" className="flex items-center gap-2">
               <Cloud className="w-4 h-4" />
-              Weather & Tips
+              मौसम और सुझाव | Weather & Tips
             </TabsTrigger>
             <TabsTrigger value="chat" className="flex items-center gap-2">
               <MessageCircle className="w-4 h-4" />
-              AI Assistant
+              AI सहायक | AI Assistant
             </TabsTrigger>
           </TabsList>
 
@@ -100,17 +100,17 @@ const Dashboard = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Camera className="w-5 h-5 text-primary" />
-                    Upload Crop Image
+                    फसल की तस्वीर अपलोड करें | Upload Crop Image
                   </CardTitle>
                   <CardDescription>
-                    Take a photo of affected crops to identify diseases
+                    रोगों की पहचान के लिए प्रभावित फसलों की तस्वीर लें | Take a photo of affected crops to identify diseases
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="border-2 border-dashed border-border rounded-lg p-8 text-center">
                     <Upload className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
                     <p className="text-muted-foreground mb-4">
-                      Click to upload or drag and drop crop image
+                      अपलोड करने के लिए क्लिक करें या फसल की तस्वीर खींचकर छोड़ें | Click to upload or drag and drop crop image
                     </p>
                     <input
                       type="file"
@@ -121,7 +121,7 @@ const Dashboard = () => {
                     />
                     <Button asChild className="bg-gradient-primary">
                       <label htmlFor="image-upload" className="cursor-pointer">
-                        Choose Image
+                        तस्वीर चुनें | Choose Image
                       </label>
                     </Button>
                   </div>
@@ -131,7 +131,7 @@ const Dashboard = () => {
                       <div className="w-full bg-secondary rounded-full h-2">
                         <div className="bg-primary h-2 rounded-full w-full animate-pulse"></div>
                       </div>
-                      <p className="text-xs text-muted-foreground">Analyzing image...</p>
+                      <p className="text-xs text-muted-foreground">तस्वीर का विश्लेषण हो रहा है... | Analyzing image...</p>
                     </div>
                   )}
                 </CardContent>
@@ -142,10 +142,10 @@ const Dashboard = () => {
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
                       <AlertTriangle className="w-5 h-5 text-destructive" />
-                      Disease Detected
+                      रोग पाया गया | Disease Detected
                     </CardTitle>
                     <CardDescription>
-                      Analysis results and recommendations
+                      विश्लेषण परिणाम और सिफारिशें | Analysis results and recommendations
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
@@ -157,7 +157,7 @@ const Dashboard = () => {
                     </div>
                     
                     <div className="flex items-center gap-2">
-                      <span className="text-sm text-muted-foreground">Confidence:</span>
+                      <span className="text-sm text-muted-foreground">विश्वसनीयता: | Confidence:</span>
                       <div className="flex-1 bg-secondary rounded-full h-2">
                         <div 
                           className="bg-primary h-2 rounded-full" 
@@ -168,7 +168,7 @@ const Dashboard = () => {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold mb-2 text-earth">Recommended Actions:</h4>
+                      <h4 className="font-semibold mb-2 text-earth">सुझावित कार्य: | Recommended Actions:</h4>
                       <ul className="space-y-2">
                         {diseaseResult.precautions.map((precaution, index) => (
                           <li key={index} className="flex items-start gap-2 text-sm">
@@ -192,7 +192,7 @@ const Dashboard = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Sun className="w-5 h-5 text-sky" />
-                    Current Weather
+                    वर्तमान मौसम | Current Weather
                   </CardTitle>
                 </CardHeader>
                 <CardContent>

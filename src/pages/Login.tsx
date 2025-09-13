@@ -38,11 +38,11 @@ const Login = () => {
           <TabsList className="grid w-full grid-cols-2 mb-8">
             <TabsTrigger value="farmer" className="flex items-center gap-2">
               <Smartphone className="w-4 h-4" />
-              Farmer Login
+              किसान लॉगिन | Farmer Login
             </TabsTrigger>
             <TabsTrigger value="panchayat" className="flex items-center gap-2">
               <Users className="w-4 h-4" />
-              Gram Panchayat
+              ग्राम पंचायत | Gram Panchayat
             </TabsTrigger>
           </TabsList>
 
@@ -52,20 +52,20 @@ const Login = () => {
                 <div className="mx-auto w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mb-4">
                   <User className="w-6 h-6 text-white" />
                 </div>
-                <CardTitle className="text-2xl">Farmer Direct Login</CardTitle>
+                <CardTitle className="text-2xl">किसान प्रत्यक्ष लॉगिन | Farmer Direct Login</CardTitle>
                 <CardDescription>
-                  Login with your registered mobile number
+                  अपने पंजीकृत मोबाइल नंबर से लॉगिन करें | Login with your registered mobile number
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="space-y-2">
-                  <Label htmlFor="farmer-phone">Mobile Number</Label>
+                  <Label htmlFor="farmer-phone">मोबाइल नंबर | Mobile Number</Label>
                   <div className="relative">
                     <Phone className="absolute left-3 top-3 w-4 h-4 text-muted-foreground" />
                     <Input
                       id="farmer-phone"
                       type="tel"
-                      placeholder="Enter your mobile number"
+                      placeholder="अपना मोबाइल नंबर दर्ज करें | Enter mobile number"
                       className="pl-10"
                       value={farmerLogin.phone}
                       onChange={(e) => setFarmerLogin(prev => ({ ...prev, phone: e.target.value }))}
@@ -73,23 +73,23 @@ const Login = () => {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="farmer-password">Password</Label>
+                  <Label htmlFor="farmer-password">पासवर्ड | Password</Label>
                   <Input
                     id="farmer-password"
                     type="password"
-                    placeholder="Enter your password"
+                    placeholder="अपना पासवर्ड दर्ज करें | Enter password"
                     value={farmerLogin.password}
                     onChange={(e) => setFarmerLogin(prev => ({ ...prev, password: e.target.value }))}
                   />
                 </div>
                 <Button className="w-full bg-gradient-primary hover:bg-primary-hover text-white font-medium py-3">
-                  Login to Dashboard
+                  डैशबोर्ड में लॉगिन करें | Login to Dashboard
                 </Button>
                 <div className="text-center pt-4">
                   <p className="text-sm text-muted-foreground">
-                    Don't have an account?{" "}
+                    खाता नहीं है? | Don&apos;t have an account?{" "}
                     <Link to="/signup" className="text-primary hover:underline font-medium">
-                      Register here
+                      यहाँ रजिस्टर करें | Register here
                     </Link>
                   </p>
                 </div>
@@ -103,9 +103,9 @@ const Login = () => {
                 <div className="mx-auto w-12 h-12 bg-gradient-earth-sky rounded-full flex items-center justify-center mb-4">
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
-                <CardTitle className="text-2xl">Gram Panchayat Login</CardTitle>
+                <CardTitle className="text-2xl">ग्राम पंचायत लॉगिन | Gram Panchayat Login</CardTitle>
                 <CardDescription>
-                  Help farmers without mobile devices access services
+                  बिना मोबाइल वाले किसानों की सेवा में मदद करें | Help farmers without mobile devices access services
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
